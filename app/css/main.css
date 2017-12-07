@@ -9,6 +9,7 @@
             box-shadow: 0 0 0 45px rgba(232, 76, 61, 0); } }
 
 body {
+  margin: 10px 0 0;
   font-size: 13px;
   font-family: 'Helvetica', sans-serif; }
 
@@ -139,10 +140,9 @@ header {
 #mainSection {
   border: 1px solid transparent;
   background-image: url("../img/secondSectionBack.jpg");
-  -webkit-background-size: auto auto;
-          background-size: auto;
-  background-position-y: -130px;
-  max-height: 840px; }
+  -webkit-background-size: 1920px 1080px;
+          background-size: 1920px 1080px;
+  background-position-y: -130px; }
 
 .main-topText {
   margin: 12% 0 6%;

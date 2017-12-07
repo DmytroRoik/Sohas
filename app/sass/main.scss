@@ -2,6 +2,7 @@ $mainColor: #1E437B;
 @keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
 
 body{
+	margin: 10px 0 0;
 	font-size: 13px;
 	font-family: 'Helvetica', sans-serif;
 }
@@ -94,9 +95,8 @@ header{
 #mainSection{
 	border:1px solid transparent;
 	background-image: url('../img/secondSectionBack.jpg');
-	background-size:auto;
+	background-size:1920px 1080px;
 	background-position-y: -130px;
-	max-height: 840px;
 }
 .main{
 	&-topText{
