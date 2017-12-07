@@ -1,7 +1,9 @@
 $mainColor: #1E437B;
+@keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+
 body{
-font-size: 13px;
-font-family: 'Helvetica', sans-serif;
+	font-size: 13px;
+	font-family: 'Helvetica', sans-serif;
 }
 ul{
 	list-style: none;
@@ -15,12 +17,12 @@ header{
 	display: flex;
 	justify-content: flex-end;
 	align-items: start;
+	max-height: 200px;
+	margin-bottom: 0;
 }
 .container{
 	margin: 0 auto;
-	width:70%;
-	border:1px solid red;
-}
+	width:75%;}
 .header{
 	&-logo{
 		position: absolute;
@@ -47,7 +49,7 @@ header{
 		nav ul {
 			width: auto;
 			justify-content: space-around;
-			 }
+		}
 		ul li, nav ul li{
 			float: left;
 			padding: 10px;
@@ -74,4 +76,93 @@ header{
 		background-color: transparent;
 		color: $mainColor;
 	}
+	&-pulse{
+		background-color: #7CE800;
+		padding: 25px 30px ;
+		color: $mainColor;
+		font-weight: bold;
+		font-size: 14px;
+		box-shadow: 0 0 0 0 #7CE800;
+		animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+		&:hover{
+			color:#7CE800;
+			border:1px solid #7CE800;
+		}
+	}
 }
+/*Second section*/
+#mainSection{
+	border:1px solid transparent;
+	background-image: url('../img/secondSectionBack.jpg');
+	background-size:auto;
+	background-position-y: -130px;
+	max-height: 840px;
+}
+.main{
+	&-topText{
+		margin: 12% 0 6%;
+		font-family: 'Gotham Pro', sans-serif;
+		font-size: 30px;
+		text-align: center;
+		color: white;
+	}
+	&-middleText{
+		font-weight: 1000;
+		font-size: 80px;
+		font-stretch: expanded;
+		text-align: center;
+		color: #7AE400;
+	}
+	&-list{
+		color: white;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		li{
+			position: relative;
+			max-width: 20%;
+			font-size: 16px;
+			padding-top: 50px;
+			background-position:30px 0 ; 
+			background-repeat: no-repeat;
+			&:nth-child(1){
+				background-image: url(../img/ico-main-1.png);
+			}	
+			&:nth-child(2){
+				background-image: url(../img/ico-main-2.png);
+			}
+			&:nth-child(3){
+				background-image: url(../img/ico-main-3.png);
+			}
+			&:nth-child(4){
+				background-image: url(../img/ico-main-4.png);
+			}		
+		}
+		
+		li:before,li:after{
+			content: '';
+			position: absolute;
+			display: inline-block;
+			top:0;
+			width: 16px;
+			height: 16px;
+			background-color: #7CE800;
+			border-radius: 50%;
+		}
+		li:after{
+			top:20px;
+			left:0;
+		}
+	}
+	&-bottom {
+		display: block;
+		font-size: 26px;
+		text-align: center;
+		color: white;
+		margin: 6%;
+	}
+}
+#getConsult{
+	margin: 0 9% 5%;
+}
+
